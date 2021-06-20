@@ -83,7 +83,7 @@ Client.on("message", message => {
                 message.reply("Le membre à était mal mentionné !");
             }
             else {
-                mention.roles.add("855903685438603284");
+                mention.roles.add("853361403947778069");
                 message.reply("L'utilisateur **__" + mention.displayName + "__** à était mute avec succès.");
             }
         }
@@ -97,7 +97,7 @@ Client.on("message", message => {
                 message.reply("Le membre à était mal mentionné !");
             }
             else {
-                mention.roles.remove("855903685438603284");
+                mention.roles.remove("853361403947778069");
                 message.reply("L'utilisateur **__" + mention.displayName + "__** à était unmute avec succès.");
             }
         }
@@ -113,10 +113,10 @@ Client.on("message", message => {
             else {
                 let args = message.content.split(" ");
                 
-                mention.roles.add("855903685438603284");
+                mention.roles.add("853361403947778069");
                 message.reply("L'utilisateur **__" + mention.displayName + "__** à était tempmute avec succès.");
                 setTimeout(function() {
-                    mention.roles.remove("855903685438603284");
+                    mention.roles.remove("853361403947778069");
                     message.channel.send("L'utilisateur <@" + mention.id + "> n'est plus mute est peu désormais re parler !");
                 }, args[2] * 1000);
             }
@@ -125,4 +125,4 @@ Client.on("message", message => {
 });
 
 
-Client.login("ODU1ODMyODI3MjA2Njk2OTkw.YM4Obg.wdlWeqasVTCDg5-W9VdsggvHVio");
+Client.login(process.env.TOKEN);
